@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column; /* Met les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    margin: 0;
+    background-color: #f0f0f0; /* Couleur de fond légère */
+}
+
+h1 {
+    color: #333;
+}
+
+/* Style pour notre zone de simulation */
+#simulationCanvas {
+    border: 1px solid black; /* Ajoute une bordure noire pour voir le canvas */
+    background-color: #e0e0e0; /* Un fond légèrement différent pour le canvas */
+    /* La taille sera définie dans le JavaScript pour plus de contrôle */
+}
