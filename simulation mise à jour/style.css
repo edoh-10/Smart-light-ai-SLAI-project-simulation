@@ -1,0 +1,75 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column; /* Met les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    margin: 0;
+    padding-bottom: 20px; /* Ajoute de l'espace en bas */
+    background-color: #f0f0f0; /* Couleur de fond légère */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px; /* Réduit l'espace sous le titre */
+}
+
+/* Style pour notre zone de simulation */
+#simulationCanvas {
+    border: 1px solid black; /* Ajoute une bordure noire pour voir le canvas */
+    background-color: #e0e0e0; /* Un fond légèrement différent pour le canvas */
+    /* La taille sera définie dans le JavaScript pour plus de contrôle */
+    max-width: 100%; /* Empêche le canvas de dépasser la largeur de l'écran */
+    box-sizing: border-box; /* Inclut la bordure dans la taille */
+}
+
+/* Conteneur pour les contrôles utilisateur */
+#controlsContainer {
+    margin-top: 15px; /* Espace au-dessus des contrôles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Espace augmenté entre les groupes de contrôle */
+    flex-wrap: wrap; /* Permet aux contrôles de passer à la ligne sur petits écrans */
+    width: 100%; /* Prend toute la largeur pour mieux gérer le wrap */
+    padding: 0 10px; /* Petit padding horizontal */
+    box-sizing: border-box;
+}
+
+/* Groupe de contrôles (Densité, Vitesse) */
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre les éléments d'un même groupe */
+    flex-wrap: nowrap; /* Empêche le retour à la ligne DANS un groupe */
+}
+
+
+/* Style commun pour les boutons */
+#controlsContainer button {
+    padding: 8px 12px; /* Ajusté pour potentiellement moins de texte */
+    font-size: 14px;
+    background-color: #4CAF50; /* Vert */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Effet de transition au survol */
+    white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */
+}
+
+#controlsContainer button:hover {
+    background-color: #45a049; /* Vert un peu plus foncé au survol */
+}
+
+#controlsContainer button:active {
+    background-color: #3e8e41; /* Vert encore plus foncé au clic */
+}
+
+/* Style pour les informations (densité, vitesse) */
+#densityInfo, #speedInfo {
+    font-style: italic;
+    color: #555;
+    min-width: 110px; /* Donne une largeur minimale pour éviter les sauts */
+    text-align: center;
+    white-space: nowrap;
+}
